@@ -1,6 +1,7 @@
 from flask import Flask
 
 from controllers.admin_controller import admin_controller
+from controllers.home_controller import home_controller
 
 from os import environ
 from waitress import serve
@@ -10,6 +11,9 @@ app = Flask(__name__)
 app.template_folder = "views/templates"
 app.static_folder = "views/static"
 
+# app.secret_key = environ.get("SECRET_KEY", "secret")
+
+app.register_blueprint(home_controller)
 app.register_blueprint(admin_controller, url_prefix="/admin")
 
 
