@@ -1,7 +1,4 @@
-from bson import ObjectId
-from flask import Blueprint, jsonify, render_template, request
-from models.history_model import HistoryModel
-from models.user_model import UserModel
+from flask import Blueprint, render_template
 from models.language_model import LanguageModel
 
 home_controller = Blueprint("home_controller", __name__)
