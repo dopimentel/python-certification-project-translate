@@ -3,7 +3,7 @@ from src.models.history_model import HistoryModel
 
 
 # Req. 7
-def test_request_history(prepare_base):
+def test_request_history():
     history_list = json.loads(HistoryModel.list_as_json())
     assert history_list[0]["text_to_translate"] == "Hello, I like videogame"
     assert history_list[0]["translate_from"] == "en"
