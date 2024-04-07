@@ -23,7 +23,7 @@ def home():
                 "text_to_translate": text_to_translate,
                 "translate_from": translate_from,
                 "translate_to": translate_to,
-                # "translated": translated,
+                "translated": translated,
             }
         ).save()
 
@@ -65,7 +65,7 @@ def reverse():
             "text_to_translate": translated,
             "translate_from": translate_to,
             "translate_to": translate_from,
-            # "translated": text_to_translate,
+            "translated": text_to_translate,
         }
     ).save()
 
